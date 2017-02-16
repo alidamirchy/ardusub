@@ -90,7 +90,7 @@ const AP_Param::GroupInfo AP_Baro::var_info[] = {
     // @Param: SPEC_GRAV
     // @DisplayName: Specific Gravity (For water depth measurement)
     // @Description: This sets the specific gravity of the fluid when flying an underwater ROV. Set to 1.0 for freshwater or 1.024 for saltwater
-    AP_GROUPINFO("SPEC_GRAV", 8, AP_Baro, _specific_gravity, 1.0),
+    AP_GROUPINFO_FRAME("SPEC_GRAV", 8, AP_Baro, _specific_gravity, 1.0, AP_PARAM_FRAME_SUB),
 
 #if BARO_MAX_INSTANCES > 1
     // @Param: ABS_PRESS2
